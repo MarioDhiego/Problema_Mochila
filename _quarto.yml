@@ -1,0 +1,42 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Problema da Mochila"
+  subtitle: "**Algoritmos Gulosos**"
+  author:
+    - name: "**Mário Diego Rocha Valente**"
+      orcid: 0000-0001-7262-3336
+    - name: "**Luis Carlos**"
+    - name: "**Rodrigo Morais**"
+  page-footer:
+    left: |
+      Copyright: UFPA - 2025
+    right: |
+      Construído <a href="https://quarto.org/">Pacote Quarto no R4.3</a>.
+  cover-image: mochila.png
+  favicon: mochila.png
+  site-url: https://www.ufpa.gov.br/
+  repo-url : https://github.com/MarioDhiego/
+  repo-branch: main
+  repo-actions: [edit, issue]
+  downloads: [pdf, docx]
+  sharing: [twitter, facebook]
+  page-navigation: true  
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

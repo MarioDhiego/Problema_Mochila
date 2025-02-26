@@ -1,0 +1,32 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Problema da Mochila",
+    "section": "",
+    "text": "Prefacácio\nO problema da mochila (em inglês, Knapsack Problem) é um problema de otimização combinatória . O nome se dá devido ao modelo de uma situação em que é necessário preencher uma mochila com objetos de diferentes pesos e valores . O objetivo é que se preencha a mochila com o maior valor possível, não ultrapassando o peso máximo suportado pela mochila.\nO problema da mochila é um dos 21 problemas NP-completos de Richard Karp, expostos em 1972. A formulação do problema é extremamente simples, porém sua solução é mais complexa. Este problema é a base do primeiro algoritmo de chave pública (chaves assimétricas).\nNormalmente este problema é resolvido com programação dinâmica, buscando então a resolução exata do problema, mas também sendo possível usar PSE (procedimento de separação e evolução). Existem também outras técnicas, como usar algoritmo guloso, meta-heurística ( algoritmos genéticos ) para soluções aproximadas.",
+    "crumbs": [
+      "Prefacácio"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "Richard Manning Karp é um cientista da computação e teórico computacional da Universidade da California, Berkeley, reconhecido pela sua pesquisa sobre teoria dos algoritmos, pelo qual recebeu um Prêmio Turing em 1985, Medalha Benjamin Franklin em Computação e Ciência Cognitiva em 2004, e o Prêmio Kyoto em 2008.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  }
+]
