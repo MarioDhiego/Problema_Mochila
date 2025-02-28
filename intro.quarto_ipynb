@@ -1,0 +1,66 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "```{=html}\n",
+        "<style>\n",
+        "body{text-align: justify}\n",
+        "</style>\n",
+        "```\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        ":::: progress\n",
+        "::: {.progress-bar style=\"width: 100%;\"}\n",
+        ":::\n",
+        "::::\n",
+        "\n",
+        "# Introdução\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "Richard Manning Karp é um cientista da computação e teórico computacional da Universidade da California, Berkeley, reconhecido pela sua pesquisa sobre teoria dos algoritmos, pelo qual recebeu um Prêmio Turing em 1985, Medalha Benjamin Franklin em Computação e Ciência Cognitiva em 2004, e o Prêmio Kyoto em 2008.\n",
+        "\n",
+        "![](images/Karp.jpg){fig-align=\"center\" width=\"124\"}\n"
+      ],
+      "id": "c27a44ce"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from mip import *\n"
+      ],
+      "id": "bd75b8bf",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::: progress\n",
+        "::: {.progress-bar style=\"width: 100%;\"}\n",
+        ":::\n",
+        "::::"
+      ],
+      "id": "e2905883"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

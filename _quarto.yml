@@ -6,10 +6,11 @@ book:
   title: "Problema da Mochila"
   subtitle: "**Algoritmos Gulosos**"
   author:
-    - name: "**Mário Diego Rocha Valente**"
-      orcid: 0000-0001-7262-3336
+    - name: "**Arthur Cordeiro**"
+    - name: "**Gustvao Costa**"
     - name: "**Luis Carlos**"
-    - name: "**Rodrigo Morais**"
+    - name: "**Mário Diego valente**"
+    - name: "*Walfredo Filho*"
   page-footer:
     left: |
       Copyright: UFPA - 2025

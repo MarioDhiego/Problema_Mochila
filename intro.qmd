@@ -1,3 +1,4 @@
+
 ```{=html}
 <style>
 body{text-align: justify}
@@ -12,13 +13,9 @@ body{text-align: justify}
 # Introdução
 
 
-
-
-
 Richard Manning Karp é um cientista da computação e teórico computacional da Universidade da California, Berkeley, reconhecido pela sua pesquisa sobre teoria dos algoritmos, pelo qual recebeu um Prêmio Turing em 1985, Medalha Benjamin Franklin em Computação e Ciência Cognitiva em 2004, e o Prêmio Kyoto em 2008.
 
 ![](images/Karp.jpg){fig-align="center" width="124"}
-
 
 
 

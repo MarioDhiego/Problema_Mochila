@@ -1,7 +1,139 @@
-# Summary
+```{=html}
+<style>
+body{text-align: justify}
+</style>
+```
 
-In summary, this book has no content whatsoever.
+:::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+::::
+
+# Resultados
+
+
 
 ```{r}
-1 + 1
+
+library(reticulate)
+
 ```
+
+
+
+
+## Implementação do Problema da Mochila em Python
+
+
+
+O pacote **Mixed-Integer Linear Programming (MIP)** é uma coleção de ferramentas Python para modelagem e solução de programas Lineares Inteiros Mistos (MIPs). A sintaxe MIP foi inspirada no pacote **Pulp**. Assim como o **CyLP**, ele também fornece acesso a recursos avançados do solver, como geração de corte, restrições preguiçosas, MIPstarts e pools de soluções. Portar modelos Pulp e Gurobi deve ser bem fácil.
+
+
+### Declarar as Constantes
+
+```{python}
+
+#from mip import *
+
+RANDOM_SEED   = 1
+NUM_PRODUTOS  = 10
+NUM_MOCHILAS  = 2
+```
+
+
+
+### Variáveis para Armazenar os Dados
+
+```{python}
+
+produtos = {}
+mochilas = {}
+gerar_produtos(produtos)
+gerar_mochilas(mochilas)
+
+```
+
+
+### Imprimir Itens
+
+```{python}
+
+imprimir_produtos(produtos)
+imprimir_mochilas(mochilas)
+
+```
+
+
+### Maximização Númérica
+
+
+```{python}
+
+modelo = Model(sense=MAXIMIZE)
+
+```
+
+
+### Variáveis Decisão
+
+```{python}
+
+carga = {} # qual produto será colcoado em cada mochila
+
+for m in mochilas:
+    for p in produtos:
+        carga[(m, p)] = modelo.add_var(var_type=BINARY)  
+
+```
+
+
+
+
+### Restrição 
+
+```{python}
+
+# a) O mesmo produto não pode ser colocado nas duas mochilas
+
+for p in produtos:        
+    modelo += xsum(carga[(m, p)] for m in mochilas) <= 1
+
+
+# b) Soma dos pesos dos produtos alocados em uma mochila não devem ser maior do que a carga máxima suportada pela mochila
+
+
+for m in mochilas:    
+    modelo += xsum(carga[(m, p)] * produtos[p]['peso'] for p in produtos) <= mochilas[m]['carga_maxima']
+
+```
+
+
+### Função Objetivo
+
+```{python}
+
+modelo.objective = maximize(
+    xsum(carga[(m, p)] * produtos[p]['valor']
+         for m in mochilas 
+             for p in produtos
+         if (m, p) in carga
+    )
+)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+:::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+::::
+
