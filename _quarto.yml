@@ -10,12 +10,12 @@ book:
     - name: "**Gustvao Costa**"
     - name: "**Luis Carlos**"
     - name: "**Mário Diego valente**"
-    - name: "*Walfredo Filho*"
+    - name: "**Walfredo Filho**"
   page-footer:
     left: |
-      Copyright: UFPA - 2025
+      Copyright: FACOMP UFPA - 2025
     right: |
-      Construído <a href="https://quarto.org/">Pacote Quarto no R4.3</a>.
+      Construído <a href="https://quarto.org/">Pacote Quarto no R4.4</a>.
   cover-image: mochila.png
   favicon: mochila.png
   site-url: https://www.ufpa.gov.br/

@@ -9,21 +9,9 @@ body{text-align: justify}
 :::
 ::::
 
-
-
 # Prefacácio {.unnumbered}
 
 O problema da mochila (em inglês, **Knapsack Problem**) é um problema de otimização combinatória . O nome se dá devido ao modelo de uma situação em que é necessário preencher uma mochila com objetos de diferentes pesos e valores . O objetivo é que se preencha a mochila com o maior valor possível, não ultrapassando o peso máximo suportado pela mochila.
-
-O problema da mochila é um dos 21 problemas NP-completos de **Richard Karp**, expostos em 1972. A formulação do problema é extremamente simples, porém sua solução é mais complexa. Este problema é a base do primeiro algoritmo de chave pública (chaves assimétricas).
-
-Normalmente este problema é resolvido com programação dinâmica, buscando então a resolução exata do problema, mas também sendo possível usar PSE (procedimento de separação e evolução). Existem também outras técnicas, como usar algoritmo guloso, meta-heurística ( algoritmos genéticos ) para soluções aproximadas.
-
-
-
-
-
-
 
 :::: progress
 ::: {.progress-bar style="width: 100%;"}
