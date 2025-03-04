@@ -19,13 +19,27 @@ Richard Manning Karp é um cientista da computação e teórico computacional da
 
 ![](images/Karp.jpg){fig-align="center" width="152"}
 
+
+:::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+::::
+
+
+# Algoritmos Gulosos
+
+Foi proposto por **George Dantzig**, em 1957, um algoritmo de aproximação gulosa para resolver o problema da mochila. A versão dele dispõe os itens em ordem decrescente de valor por unidade de peso. Em seguida, começa a inseri-los na mochila com tantas cópias quanto possível do primeiro tipo de item, até que não haja mais espaço na mochila. Caso o problema seja delimitado, ou seja, a oferta para cada tipo de item tenha um limite, o algoritmo pode ficar muito custoso.
+
+![](George-Dantzig.jpg){fig-align="center" width="205"}
+
+
+
 :::: progress
 ::: {.progress-bar style="width: 100%;"}
 :::
 ::::
 
 # Variação do Problema da Mochila
-
 ## Problema da Mochila Fracionária
 
 Temos 3 queijos, no qual o Queijo 1 tenho um pedaço de **10 kg** e consigo vender pelo equivalente a R\$ 100,00 reais. Já o queijo 2 tenho um paedaço de **5 kg** e posso vender por R\$ 80,00 reais. E o queijo 3 tem um pedado de **10 kg** e consigo vender por R\$ 150,00. Sendo a capacidade máxima da mochila de **20 kg**.
@@ -36,8 +50,13 @@ Pra esse tipo de problema é possivel fracionar os queijos, ou seja, levar os 20
 -   Queijo 2: 16 reais por kg
 -   Queijo 3: 15 reais por kg
 
-## Problema da Mochila zero-1
 
+:::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+::::
+
+## Problema da Mochila zero-1
 ### Conjuntos
 
 -   $I = itens \ i$
@@ -46,7 +65,7 @@ Pra esse tipo de problema é possivel fracionar os queijos, ou seja, levar os 20
 
 -   $P_{i} = peso \ dos \  itens \ i$
 -   $V_{i} = valor \ do \ item \ i$
--   $W_{j} =  capcidade \ da \ mochila$
+-   $W_{i} =  capacidade \ da \ mochila$
 
 ### Variavel de Decisão
 
@@ -56,20 +75,57 @@ Pra esse tipo de problema é possivel fracionar os queijos, ou seja, levar os 20
 
 ### Função Objetivo
 
-$$ MAX \ \sum \sum V_{i}X_{i}$$ \### Restrições
+$$ MAX \ \sum \sum V_{i}X_{i}$$ 
 
-$$  \sum P_{i}X_{i} \leq  \ W_{j}$$ \### Domínio das Variáveis
+### Restrições
+
+$$  \sum P_{i}X_{i} \leq  \ W_{j}$$ 
+
+### Domínio das Variáveis
 
 $$ X_{i} \in \{0,1\}, \ \forall_{i} \ \in I$$
 
+
+:::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+::::
+
 ## Problema da Mochila Multiplas
+### Conjuntos
 
+-   $I = itens \ i$
+-   $M = mohilas \ j$
 
+### Parâmetros
 
+-   $P_{i} = peso \ dos \  itens \ i$
+-   $V_{i} = valor \ do \ item \ i$
+-   $W_{j} =  capacidade \ da \ mochila \ j$
 
+### Variavel de Decisão
 
+-   $X_{ij} =  variável \ binária$
+-   1 se o item $i$ será colocado na mochila;
+-   0 caso contrário;
 
+### Função Objetivo
 
+$$ MAX \ \sum \sum V_{i}X_{ij}$$ 
+
+### Restrições
+
+Para cada mochila é analizado o limite da capacidade.
+
+$$  \sum P_{i}X_{ij} \leq  \ W_{j}, \ \forall \ j \in M$$
+
+Cada Item só pode estar em uma única mochila.
+
+$$ \sum X_{ij} \leq 1, \ \forall i  \in \ I, \ \forall j \in M$$
+
+### Domínio das Variáveis
+
+$$ X_{ij} \in \{0,1\}, \ \forall_{i} \ \in I$$
 
 
 :::: progress
@@ -77,24 +133,4 @@ $$ X_{i} \in \{0,1\}, \ \forall_{i} \ \in I$$
 :::
 ::::
 
-## Modelo Matemático
 
-Suponha que tenha uma mochila com capacidade total de $W$ e $n$ itens distintos. Seja $x_{i},...,x_{n}$ a quantidade de itens que está sendo carregado, cada um com um respectivo peso $w_{i},...,w_{n}$ e valor $v_{1},...,v_{n}$. Para Maximizar o valor da mochila é usando a seguinte equação:
-
-$$ \sum_{i=1}^{n} v_{i}x_{i}, \ \ \ sujeito \ a \ \ \sum_{i=1}^{n} w_{i}x_{i} \ \ \leq W$$
-
-:::: progress
-::: {.progress-bar style="width: 100%;"}
-:::
-::::
-
-# Algoritmos Gulosos
-
-Foi proposto por **George Dantzig**, em 1957, um algoritmo de aproximação gulosa para resolver o problema da mochila. A versão dele dispõe os itens em ordem decrescente de valor por unidade de peso. Em seguida, começa a inseri-los na mochila com tantas cópias quanto possível do primeiro tipo de item, até que não haja mais espaço na mochila. Caso o problema seja delimitado, ou seja, a oferta para cada tipo de item tenha um limite, o algoritmo pode ficar muito custoso.
-
-![](George-Dantzig.jpg){fig-align="center" width="205"}
-
-:::: progress
-::: {.progress-bar style="width: 100%;"}
-:::
-::::

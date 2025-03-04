@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Problema da Mochila",
+    "title": "PROBLEMA DA MOCHILA",
     "section": "",
-    "text": "Prefacácio\nO problema da mochila (em inglês, Knapsack Problem) é um problema de otimização combinatória . O nome se dá devido ao modelo de uma situação em que é necessário preencher uma mochila com objetos de diferentes pesos e valores . O objetivo é que se preencha a mochila com o maior valor possível, não ultrapassando o peso máximo suportado pela mochila.\nO problema da mochila é um dos 21 problemas NP-completos de Richard Karp, expostos em 1972. A formulação do problema é extremamente simples, porém sua solução é mais complexa. Este problema é a base do primeiro algoritmo de chave pública (chaves assimétricas).\nNormalmente este problema é resolvido com programação dinâmica, buscando então a resolução exata do problema, mas também sendo possível usar PSE (procedimento de separação e evolução). Existem também outras técnicas, como usar algoritmo guloso, meta-heurística ( algoritmos genéticos ) para soluções aproximadas.",
+    "text": "Prefacácio\nO problema da mochila (em inglês, Knapsack Problem) é um problema de otimização combinatória . O nome se dá devido ao modelo de uma situação em que é necessário preencher uma mochila com objetos de diferentes pesos e valores . O objetivo é que se preencha a mochila com o maior valor possível, não ultrapassando o peso máximo suportado pela mochila.",
     "crumbs": [
       "Prefacácio"
     ]
@@ -14,7 +14,37 @@
     "href": "intro.html",
     "title": "1  Introdução",
     "section": "",
-    "text": "Richard Manning Karp é um cientista da computação e teórico computacional da Universidade da California, Berkeley, reconhecido pela sua pesquisa sobre teoria dos algoritmos, pelo qual recebeu um Prêmio Turing em 1985, Medalha Benjamin Franklin em Computação e Ciência Cognitiva em 2004, e o Prêmio Kyoto em 2008.",
+    "text": "2 Algoritmos Gulosos\nFoi proposto por George Dantzig, em 1957, um algoritmo de aproximação gulosa para resolver o problema da mochila. A versão dele dispõe os itens em ordem decrescente de valor por unidade de peso. Em seguida, começa a inseri-los na mochila com tantas cópias quanto possível do primeiro tipo de item, até que não haja mais espaço na mochila. Caso o problema seja delimitado, ou seja, a oferta para cada tipo de item tenha um limite, o algoritmo pode ficar muito custoso.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#problema-da-mochila-fracionária",
+    "href": "intro.html#problema-da-mochila-fracionária",
+    "title": "1  Introdução",
+    "section": "3.1 Problema da Mochila Fracionária",
+    "text": "3.1 Problema da Mochila Fracionária\nTemos 3 queijos, no qual o Queijo 1 tenho um pedaço de 10 kg e consigo vender pelo equivalente a R$ 100,00 reais. Já o queijo 2 tenho um paedaço de 5 kg e posso vender por R$ 80,00 reais. E o queijo 3 tem um pedado de 10 kg e consigo vender por R$ 150,00. Sendo a capacidade máxima da mochila de 20 kg.\nPra esse tipo de problema é possivel fracionar os queijos, ou seja, levar os 20 kilos mais preciosos, que vão trazer maior retorno financeiro. Inicialmente, é necessário calcular o valor por kilo, com isso os queijos custam:\n\nQueijo 1: 10 reais por kg\nQueijo 2: 16 reais por kg\nQueijo 3: 15 reais por kg",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#problema-da-mochila-zero-1",
+    "href": "intro.html#problema-da-mochila-zero-1",
+    "title": "1  Introdução",
+    "section": "3.2 Problema da Mochila zero-1",
+    "text": "3.2 Problema da Mochila zero-1\n\n3.2.1 Conjuntos\n\n\\(I = itens \\ i\\)\n\n\n\n3.2.2 Parâmetros\n\n\\(P_{i} = peso \\ dos \\  itens \\ i\\)\n\\(V_{i} = valor \\ do \\ item \\ i\\)\n\\(W_{i} =  capacidade \\ da \\ mochila\\)\n\n\n\n3.2.3 Variavel de Decisão\n\n\\(X_{i} =  variável \\ binária\\)\n1 se o item \\(i\\) será colocado na mochila;\n0 caso contrário;\n\n\n\n3.2.4 Função Objetivo\n\\[ MAX \\ \\sum \\sum V_{i}X_{i}\\]\n\n\n3.2.5 Restrições\n\\[  \\sum P_{i}X_{i} \\leq  \\ W_{j}\\]\n\n\n3.2.6 Domínio das Variáveis\n\\[ X_{i} \\in \\{0,1\\}, \\ \\forall_{i} \\ \\in I\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#problema-da-mochila-multiplas",
+    "href": "intro.html#problema-da-mochila-multiplas",
+    "title": "1  Introdução",
+    "section": "3.3 Problema da Mochila Multiplas",
+    "text": "3.3 Problema da Mochila Multiplas\n\n3.3.1 Conjuntos\n\n\\(I = itens \\ i\\)\n\\(M = mohilas \\ j\\)\n\n\n\n3.3.2 Parâmetros\n\n\\(P_{i} = peso \\ dos \\  itens \\ i\\)\n\\(V_{i} = valor \\ do \\ item \\ i\\)\n\\(W_{j} =  capacidade \\ da \\ mochila \\ j\\)\n\n\n\n3.3.3 Variavel de Decisão\n\n\\(X_{ij} =  variável \\ binária\\)\n1 se o item \\(i\\) será colocado na mochila;\n0 caso contrário;\n\n\n\n3.3.4 Função Objetivo\n\\[ MAX \\ \\sum \\sum V_{i}X_{ij}\\]\n\n\n3.3.5 Restrições\nPara cada mochila é analizado o limite da capacidade.\n\\[  \\sum P_{i}X_{ij} \\leq  \\ W_{j}, \\ \\forall \\ j \\in M\\]\nCada Item só pode estar em uma única mochila.\n\\[ \\sum X_{ij} \\leq 1, \\ \\forall i  \\in \\ I, \\ \\forall j \\in M\\]\n\n\n3.3.6 Domínio das Variáveis\n\\[ X_{ij} \\in \\{0,1\\}, \\ \\forall_{i} \\ \\in I\\]",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
     ]
@@ -22,11 +52,31 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "2  RESULTADOS",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "text": "2.1 Instalação dos Pacotes\nO pacote mip requer o Python 3.5 ou mais recente. Como o Python-MIP está incluído no Python Package Index , uma vez que você tenha uma instalação do Python, instalá-lo é tão fácil quanto digitar no prompt de comando:",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>RESULTADOS</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#instalação-dos-pacotes",
+    "href": "summary.html#instalação-dos-pacotes",
+    "title": "2  RESULTADOS",
+    "section": "",
+    "text": "2.1.1 Instalação via Python\n\n\n#---------- Prompt de Comando ----------#\n#pip install mip\n#pip install mip --user\n#---------------------------------------#\n\n\n\n2.1.2 Instalação via R\n\n#library(reticulate)\n#py_install(\"mip\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>RESULTADOS</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#implementação-do-problema-da-mochila-em-python",
+    "href": "summary.html#implementação-do-problema-da-mochila-em-python",
+    "title": "2  RESULTADOS",
+    "section": "2.2 Implementação do Problema da Mochila em Python",
+    "text": "2.2 Implementação do Problema da Mochila em Python\nO pacote Mixed-Integer Linear Programming (MIP) é uma coleção de ferramentas Python para modelagem e solução de programas Lineares Inteiros Mistos (MIPs). A sintaxe MIP foi inspirada no pacote Pulp. Assim como o CyLP, ele também fornece acesso a recursos avançados do solver, como geração de corte, restrições preguiçosas, MIPstarts e pools de soluções. Portar modelos Pulp e Gurobi deve ser bem fácil.\n\n2.2.1 Declarar as Constantes\n\n\n#from mip import *\n\n#RANDOM_SEED   = 1\n#NUM_PRODUTOS  = 10\n#NUM_MOCHILAS  = 2\n\n\n\n2.2.2 Variáveis para Armazenar os Dados\n\n\n#produtos = {}\n#mochilas = {}\n#gerar_produtos(produtos)\n#gerar_mochilas(mochilas)\n\n\n\n2.2.3 Imprimir Itens\n\n\n#imprimir_produtos(produtos)\n#imprimir_mochilas(mochilas)\n\n\n\n2.2.4 Maximização Númérica\n\n\n#modelo = Model(sense=MAXIMIZE)\n\n\n\n2.2.5 Variáveis Decisão\n\n\n#carga = {} # qual produto será colcoado em cada mochila\n\n#for m in mochilas:\n#    for p in produtos:\n#        carga[(m, p)] = modelo.add_var(var_type=BINARY)  \n\n\n\n2.2.6 Restrição\n\n\n# a) O mesmo produto não pode ser colocado nas duas mochilas\n\n#for p in produtos:        \n#    modelo += xsum(carga[(m, p)] for m in mochilas) &lt;= 1\n\n\n# b) Soma dos pesos dos produtos alocados em uma mochila não devem ser maior do que a carga máxima suportada pela mochila\n\n\n#for m in mochilas:    \n#    modelo += xsum(carga[(m, p)] * produtos[p]['peso'] for p in produtos) &lt;= mochilas[m]['carga_maxima']\n\n\n\n2.2.7 Função Objetivo\n\n\n#modelo.objective = maximize(\n#    xsum(carga[(m, p)] * produtos[p]['valor']\n#         for m in mochilas \n#             for p in produtos\n#         if (m, p) in carga\n#    )\n#)\n\n#modelo.optimize()\n\n\n\n# Resultado\n\n#print(\"\\n=====\")\n#print(\"Valor Total em Todas as Mochilas {}\".format(modelo.objective_values))\n#print(\"=====\")\n#for m in mochilas:\n#    print(\"\\nCarga da Mochila {} com capacidade de {}g\".format(m, mochilas[m]['carga_maxima']))\n#    valor_total = 0\n#    carga_total = 0\n#    for p in produtos:\n#        if (carga[(m, p)].x == 1):\n#            valor_total += produtos[p]['valor']\n#            carga_total += produtos[p]['peso']\n#            print(\"{} \\tR$ {},00 \\t{}g\".format(p, produtos[p]['valor'], produtos[p]['peso']))\n    \n#    print(\"-\\nValor Total: R$ {},00 \\nCarga Total: {}g\\nCapacidade Ociosa: {}g\".format(valor_total, carga_total, (mochilas[m]['carga_maxima']-carga_total)))\n\n\n\n# GERAR PRODUTOS: (Peso e Valor Aleatório)\n#def gerar_produtos(prod):\n#    random.seed(RANDOM_SEED)\n#    for i in range(NUM_PRODUTOS):\n#        cod = 'p_{}'.format(i)\n#        valor = random.choice(range(1,10))   # Valor em R$\n#        peso = random.choice(range(100,999)) # Valor em gramas\n#        prod[cod] = {\n#            'valor': valor,\n#            'peso': peso\n#        }\n\n\n\n# PRODUTOS\n#def imprimir_produtos(prod):\n#    print(\"PRODUTOS\")\n#    print(\"Cód \\tValor \\t\\tPeso\")\n#    for p in prod:\n#        print(\"{}\\tR$ {},00 \\t{}g\".format(p, prod[p]['valor'], prod[p]['peso']))\n        \n\n\n\n# GERAR MOCHILAS: Pesos Aleatórios\n#def gerar_mochilas(moc):\n#    random.seed(RANDOM_SEED)\n#    for i in range(NUM_MOCHILAS):\n#        cod = 'm_{}'.format(i)\n#        carga_maxima = random.choice(range(500,2000))   # Carga máxima em gramas\n#        moc[cod] = {\n#            'carga_maxima': carga_maxima\n#        }\n        \n\n\n\n# MOCHILAS\n#def imprimir_mochilas(moc):\n#    print(\"\\nMOCHILAS\")\n#    print(\"Cód \\tCarga Máxima\")\n#    for m in moc:\n#        print(\"{} \\t{}g\".format(m, moc[m]['carga_maxima']))",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>RESULTADOS</span>"
     ]
   }
 ]
