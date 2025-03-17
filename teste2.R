@@ -5,6 +5,13 @@ library(DT)
 library(dplyr)
 library(tidyr)
 library(ggalluvial)
+library(viridis)
+
+# Lista de nomes aleatórios para os itens
+nomes_aleatorios <- c("Notebook", "Câmera", "Livro", "Tablet", "Celular", "Fone", "Monitor", 
+                      "Teclado", "Mouse", "Impressora", "Drone", "HD Externo", "Roteador", 
+                      "Smartwatch", "Console", "Projetor", "Caixa de Som", "Microfone", "Luminária")
+
 
 ui <- fluidPage(
   titlePanel("Problema da Mochila Múltipla"),
@@ -29,7 +36,7 @@ server <- function(input, output) {
   resultado <- eventReactive(input$resolver, {
     # Geração dos itens com pesos e valores aleatórios
     itens <- data.frame(
-      Item = paste0("Item_", 1:input$num_itens),
+      Item = sample(nomes_aleatorios, input$num_itens, replace = TRUE),
       Valor = sample(10:1500, input$num_itens, replace = TRUE),  # Valor (R$)
       Peso = sample(50:200, input$num_itens, replace = TRUE)   # Peso (gramas)
     )
