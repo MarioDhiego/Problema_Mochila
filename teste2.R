@@ -9,8 +9,8 @@ library(viridis)
 
 # Lista de nomes aleatórios para os itens
 nomes_aleatorios <- c("Notebook", "Câmera", "Livro", "Tablet", "Celular", "Fone", "Monitor", 
-                      "Teclado", "Mouse", "Impressora", "Drone", "HD Externo", "Roteador", 
-                      "Smartwatch", "Console", "Projetor", "Caixa de Som", "Microfone", "Luminária")
+                      "Teclado", "Mouse", "Carteira", "Drone", "HD Externo", "Roteador", 
+                      "Smartwatch", "Tênnis", "Garrafa", "Caixa de Som", "Microfone", "Luminária")
 
 
 ui <- fluidPage(
@@ -125,12 +125,14 @@ server <- function(input, output) {
     )
     
     ggplot(solucao, aes(axis1 = Item, axis2 = Mochila, y = Valor_Reais)) +
-      geom_alluvium(aes(fill = Mochila), alpha = 0.7) +
-      geom_stratum(fill = "gray80") +
-      geom_text(stat = "stratum", aes(label = after_stat(stratum)), size = 4) +
-      scale_x_discrete(limits = c("Itens", "Mochilas")) +
-      labs(title = "Distribuição dos Itens nas Mochilas", x = "", y = "Valor Total (R$)") +
-      theme_minimal()
+      geom_alluvium(aes(fill = Mochila), alpha = 0.8) +
+      geom_stratum(fill = "gray80", color = "black") +
+      geom_text(stat = "stratum", aes(label = after_stat(stratum)), size = 5) +
+      scale_fill_viridis_d(option = "D") +  # Usa a paleta viridis
+      labs(title = "Distribuição dos Itens nas Mochilas",
+           x = "Categorias",
+           y = "Valor Total (R$)") +
+      theme_minimal(base_size = 12)
   })
 }
 
